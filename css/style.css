@@ -6,14 +6,7 @@
 	border: none;
 	outline: none;
 }
-/**grid
-.grid{
-	display: grid;
-	grid-template-rows:10% 90% 10%;
-	grid-template-areas:"header"
-	                    "main"
-						"footer";
-}**/
+
 /** fondo**/
 main, footer {
 	background-image: url(https://www.sonrisasdegato.com/wp-content/uploads/2015/12/fondo-huellas.jpg);
@@ -26,7 +19,6 @@ header{
 	padding-bottom: 30px;
 	padding-right: 10px;
 	align-items: center;
-	grid-area: header;
 }
 .header__div {
 	width: 50%;
@@ -42,6 +34,7 @@ header{
 	padding-left: 15px;
 }
 .header__menu{
+	text-decoration: none;
     padding-right: 10px;
 	padding-left: 10px;
 	padding-top: 10px;
@@ -56,9 +49,6 @@ header{
 	background-color: rgb(243, 140, 43);
 }
 /**main**/
-main {
-	grid-area: main;
-}
 .main__grid{
 	display: grid;
 	grid-template-columns: 50% 50%;
@@ -158,8 +148,13 @@ main {
 footer {
 	display: flex;
 	flex-direction: row;
-	grid-area: footer;
 	align-self: end;
+	position: absolute;
+	/*  poner footer abajo */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 .redes {
 	width: 50%;
@@ -176,6 +171,9 @@ i{
 }
 /**responsive tablet**/
 @media screen and (max-width: 1023px) {
+	.header__menu:hover{
+		background-color: rgb(243, 140, 43);
+	}
 	.main__grid{
 		display: grid;
 		grid-template-columns: 50% 50%;
@@ -214,7 +212,9 @@ i{
 		justify-content: center;
 		align-content: center;
 	}
-	
+	.header__menu:hover{
+		background-color: rgb(243, 140, 43);
+	}
 	.header__menu{
 		font-size: 15px;
 		padding: 7px 7px 7px 7px;
