@@ -71,6 +71,7 @@ header{
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 25px;
 	padding-left: 30px;
+	padding-bottom: 20px;
 }
 .main__imagen__voluntarios{
 	grid-area: imagen;
@@ -139,10 +140,32 @@ header{
 .main__parrafo_mediano{
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 30px;
+	padding-left: 20px;
 }
-.form_contacto{
-	border-style: solid;
-	border-color: black;
+
+.main__grid__guias{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 3fr;
+	grid-template-areas:"adoptar arenero"
+	                    "cuidados cuidados";
+	padding-top: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.adoptar{
+	grid-area: adoptar;
+	padding-right: 20px;
+}
+.cuidados{
+	grid-area: cuidados;
+}
+.arenero {
+	grid-area: arenero;
+}
+.form_contacto {
+	padding-left: 35px;
+	padding-right: 20px;
 }
 /**footer**/
 footer {
@@ -169,6 +192,12 @@ i{
 	font-size: 30px;
 	padding-right: 30px;
 }
+/**bootstrap**/
+.btn-primary {
+	background-color: rgb(238, 152, 85);
+	border-color: black;
+	color: black;
+}
 /**responsive tablet**/
 @media screen and (max-width: 1023px) {
 	.header__menu:hover{
@@ -177,7 +206,7 @@ i{
 	.main__grid{
 		display: grid;
 		grid-template-columns: 50% 50%;
-		grid-template-rows: 80% 20%;
+		grid-template-rows: 3fr 1fr;
 		grid-template-areas:"parrafo parrafo"
 							"imagen imagen2";
 	}
@@ -215,13 +244,25 @@ i{
 	.header__menu:hover{
 		background-color: rgb(243, 140, 43);
 	}
+	.header__nav{
+		display: flex;
+		justify-content: center;
+	}
 	.header__menu{
 		font-size: 15px;
 		padding: 7px 7px 7px 7px;
 	}
+	.header__div{
+		display: flex;
+		justify-content: center;
+	}
 	.main__grid {
 		display: flex;
 		flex-direction: column;
+	}
+	.main__imagenes, .main__imagenes2{
+		display: flex;
+		justify-content: center;
 	}
 	.copyright{
 		font-size: 15px;
